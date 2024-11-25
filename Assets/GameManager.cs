@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        hintText.text = "Use W, A, S, D to move, R to restart";
+        hintText.text = "Use W, A, S, D to move, R to restart, Esc to quit.";
         NewGame();
     }
 
@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)) NewGame();
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
     }
 
     private void NewGame()
